@@ -1,7 +1,7 @@
 "use client"
 import { SimpleRegistrationForm } from '@/components/FromOrder'
 import React from 'react'
-import { Carousel } from "@material-tailwind/react";
+
 
 
 
@@ -15,4 +15,4 @@ const order = () => {
 }
 
 export default order
-export { Carousel }
+
