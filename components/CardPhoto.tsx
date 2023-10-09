@@ -20,13 +20,17 @@ interface Props {
     slug: string;
 }
 const CardPhoto = ({ title, id, image, price, category, slug }: Props) => {
+
     return (
         <motion.div initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -80, opacity: 0 }}
-            transition={{ duration: 0.5 }}>
+            transition={{ duration: 0.5 }}
+
+        >
             <motion.div className='flex flex-col m-2 w-full'
-                whileHover={{ scale: 1.3 }}
+
+
                 key={id}>
                 <Card className='w-full m-0 bg-white'>
                     <CardHeader>
