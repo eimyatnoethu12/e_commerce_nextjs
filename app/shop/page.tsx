@@ -4,7 +4,8 @@ import { getResources } from '@/sanity/getdata'
 import InputForm from '@/components/InputForm'
 import CardPhoto from '@/components/CardPhoto'
 import Filter from '@/components/Filter'
-import Header from '@/components/Header'
+
+
 // export const revalidate = 900;
 interface Props {
     searchParams: {
@@ -18,6 +19,7 @@ const Shop = async ({ searchParams }: Props) => {
         category: searchParams?.category || '',
         page: '1',
     })
+    // let a = ;
     console.log(resources);
 
     return (
@@ -29,7 +31,7 @@ const Shop = async ({ searchParams }: Props) => {
 
             <Filter />
             <div className='flex flex-col'>
-                {(searchParams?.query || searchParams?.category) && (
+                {/* {(searchParams?.query || searchParams?.category) && (
                     <section className="flex-center w-full flex-col
                 ">
                         <div className='flex text-center font-bold
@@ -44,7 +46,7 @@ const Shop = async ({ searchParams }: Props) => {
                         <div className='flex justify-center p-2 text-center font-bold
                         text-2xl text-black
                        underline decoration-white'>
-                            {(searchParams?.category == 'all') ? "All items" : searchParams?.category?.toUpperCase()}
+                            {(searchParams?.category == 'all') ? "All items" : <small>{searchParams?.category}</small>}
                         </div>
 
                         <div className="flex w-full flex-wrap 
@@ -72,7 +74,7 @@ const Shop = async ({ searchParams }: Props) => {
 
                         </div>
                     </section>
-                )}
+                )} */}
 
                 {(searchParams?.query == undefined && searchParams?.category == undefined)
                     && (<section className="flex-center w-full flex-col
@@ -94,7 +96,7 @@ const Shop = async ({ searchParams }: Props) => {
                         <div className='flex justify-center p-2 text-center font-bold
                         text-2xl text-black
                        underline decoration-white'>
-                            {(searchParams?.category == 'all') ? "Trending" : searchParams?.category?.toUpperCase()}
+                            {(searchParams?.category == 'all') ? "Trending" : searchParams?.category}
                         </div>
                         <div className="flex w-full flex-wrap 
         justify-center gap-3 sm:justify-center">
