@@ -13,18 +13,25 @@ const InputForm = () => {
     useEffect(() => {
         const delayDebounceFn = setTimeout(() => {
             let newUrl = '';
+
             if (search) {
-                newUrl = filterData({
-                    params: searchParams.toString(),
-                    key: 'query',
-                    value: search,
-                })
+                if (searchParams !== null) {
+                    newUrl = filterData({
+                        params: searchParams.toString(),
+                        key: 'query',
+                        value: search,
+                    })
+                }
+
             } else {
-                newUrl = filterData({
-                    params: searchParams.toString(),
-                    key: 'query',
-                    keysToRemove: ['query'],
-                })
+                if (searchParams) {
+                    newUrl = filterData({
+                        params: searchParams.toString(),
+                        key: 'query',
+                        keysToRemove: ['query'],
+                    })
+                }
+
             }
             router.push(newUrl, { scroll: false })
         }, 300)

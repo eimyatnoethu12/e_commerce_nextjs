@@ -34,6 +34,8 @@ async function Shop({ searchParams }: Props) {
                                 image={re.image}
                                 price={re.price}
                                 category={re.category}
+                                slug={re.slug}
+
                             />
 
                         )

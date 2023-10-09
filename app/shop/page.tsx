@@ -31,7 +31,7 @@ const Shop = async ({ searchParams }: Props) => {
 
             <Filter />
             <div className='flex flex-col'>
-                {/* {(searchParams?.query || searchParams?.category) && (
+                {(searchParams?.query || searchParams?.category) && (
                     <section className="flex-center w-full flex-col
                 ">
                         <div className='flex text-center font-bold
@@ -74,7 +74,7 @@ const Shop = async ({ searchParams }: Props) => {
 
                         </div>
                     </section>
-                )} */}
+                )}
 
                 {(searchParams?.query == undefined && searchParams?.category == undefined)
                     && (<section className="flex-center w-full flex-col
