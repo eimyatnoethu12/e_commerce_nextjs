@@ -42,12 +42,12 @@ const InputForm = () => {
     return (
         <div>
             <input className="bg-transparent
-             w-full
+             w-full -mt-2
              text-center border
            border-x-gray-950
             focus:ring  
             focus:border-black
-           rounded-lg p-2 placeholder:text-black"
+           rounded-lg p-2 placeholder:text-white"
                 placeholder="Enter to search"
                 defaultValue={search}
                 onChange={(e) => setSearch(e.target.value)}

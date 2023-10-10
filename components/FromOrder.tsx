@@ -102,12 +102,16 @@ export function SimpleRegistrationForm() {
         // </div>
         <>
             <div className="flex flex-col justify-center mt-44">
-                <h1 className="text-2xl font-bold">If you would like to order, you need to first login.</h1>
+                <small className="bg-white text-red-600 p-6 m-5 rounded text-xl">
+                    If you would like to order, you need to first login. But,
+                    unfortunately, Our login statement is developing <span className="font-bold text-2xl">!</span>
+                </small>
+                {/* <h1 className="text-2xl font-bold"></h1>
 
                 <h1 className="text-3xl font-bold">Unfortunately
                     , you can not login! </h1>
 
-                <h1 className="text-4xl font-bold text-black">Our login statement is developing! </h1>
+                <h1 className="text-4xl font-bold text-black"> </h1> */}
             </div >
         </>
     );

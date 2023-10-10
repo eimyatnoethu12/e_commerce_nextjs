@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='min-h-screen bg-gradient-to-l from-blue-900 via-green-900 to-blue-950  font-poppins'>
+      <body className='min-h-screen
+       bg-gradient-to-l
+        from-cyan-700  to-blue-950 font-poppins'>
 
         {children}
 

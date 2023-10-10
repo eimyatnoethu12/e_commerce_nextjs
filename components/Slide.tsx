@@ -30,7 +30,7 @@ const Slide = () => {
                     }}
 
                 >
-                    <HoverCardTrigger>
+                    <HoverCardTrigger className=''>
                         <svg viewBox="0 0 180 30">
                             <text x="0" y="20">ENJOY SHOPPING</text>
                         </svg>

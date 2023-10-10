@@ -48,7 +48,7 @@ const Filter = () => {
             {links.map((link) => (
                 <button key={link}
                     className={`${active === link ? "border-b-4 border-black" : ""}text-white
-                      p-2 m-3 rounded`}
+                      p-2  m-3 rounded font-bold`}
                     onClick={() => handleFilter(link)}
                 >
                     {link}

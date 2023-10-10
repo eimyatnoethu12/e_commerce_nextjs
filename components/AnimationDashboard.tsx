@@ -41,7 +41,7 @@ const AnimationDashboard = () => {
         }
     }
     return (
-        <div className=''>
+        <div className='-mt-10 sm:-mt-2 md:-mt-12 lg:mt-0'>
             <div ref={sliderRef} className="keen-slider zoom-out">
                 {images.map((src, idx) => (
                     <div key={idx} className="keen-slider__slide zoom-out__slide">

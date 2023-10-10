@@ -10,13 +10,18 @@ export default function Home() {
     <>
       <main className='top-0 h-full bg-black'>
         <AnimationDashboard />
-        <div className='relative -mt-14'>
-          <Slide />
-          <hr />
-          <Button asChild className='text-center w-full relative -top-3
+        <div className='relative 
+        lg:-mt-24 -mt-4 
+        sm:-mt-14
+        '>
+          <Button asChild className='text-center 
+          w-full relative rounded-none
+          lg:-mb-3 font-serif
             text-blue-600 bg-white '>
             <Link href="/shop" >Click To More Shop</Link>
           </Button>
+          <Slide />
+
         </div>
       </main>
     </>
