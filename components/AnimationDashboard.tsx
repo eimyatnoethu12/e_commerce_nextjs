@@ -4,6 +4,7 @@ import 'keen-slider/keen-slider.min.css'
 import KeenSlider from 'keen-slider'
 import { useKeenSlider, TrackDetails } from "keen-slider/react"
 import Image from 'next/image'
+import "keen-slider/keen-slider.min.css"
 const images = [
     // "/man/all-3.avif",
     // "/man/all-1.avif",
@@ -19,6 +20,9 @@ const images = [
     "/man/man-bg3.jpg",
 
 ]
+
+const animation = { duration: 50000, easing: (t: any) => t }
+
 const AnimationDashboard = () => {
     const [details, setDetails] = React.useState<TrackDetails | null>(null)
 
@@ -28,6 +32,17 @@ const AnimationDashboard = () => {
             setDetails(s.track.details)
         },
         initial: 2,
+        renderMode: "performance",
+        drag: false,
+        created(s) {
+            s.moveToIdx(5, true, animation)
+        },
+        updated(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
+        animationEnded(s) {
+            s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
     })
 
     function scaleStyle(idx: number) {
@@ -41,18 +56,19 @@ const AnimationDashboard = () => {
         }
     }
     return (
-        <div className='-mt-10 sm:-mt-2 md:-mt-12 lg:mt-0'>
+        <div className=' sm:-mt-2 md:-mt-0 lg:mt-0'>
             <div ref={sliderRef} className="keen-slider zoom-out">
                 {images.map((src, idx) => (
                     <div key={idx} className="keen-slider__slide zoom-out__slide">
 
-                        <div style={scaleStyle(idx)}
+                        <div
+                            style={scaleStyle(idx)}
                             className=' flex justify-center
                             w-full  '>
 
                             <Image src={src} width={350}
                                 height={300}
-                                className=" 
+                                className="
              object-none object-left-top 
               lg:w-3/12 
               md:w-1/12

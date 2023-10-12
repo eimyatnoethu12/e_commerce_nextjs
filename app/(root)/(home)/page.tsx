@@ -10,18 +10,34 @@ export default function Home() {
     <>
       <main className='top-0 h-full bg-black'>
         <AnimationDashboard />
-        <div className='relative 
-        lg:-mt-24 -mt-4 
+        <div className='
+        relative 
+        
+        md:mt-10
+        lg:-mt-24 mt-10
         sm:-mt-14
         '>
-          <Button asChild className='text-center 
-          w-full relative rounded-none
-          lg:-mb-3 font-serif
-            text-blue-600 bg-white '>
-            <Link href="/shop" >Click To More Shop</Link>
-          </Button>
-          <Slide />
 
+          <div className='flex lg:mt-14
+          justify-center'>
+            <Link href="/shop"
+              className='
+          text-center flex justify-center
+          w-3/6 p-3 md:w-2/6 md:p-4
+         md:text-lg lg:w-1/6
+          lg:text-lg text-xl
+          rounded-full
+          lg:mt-10 font-serif
+          
+            text-blue-600
+             outline outline-blue-900
+              hover:bg-blue-600 shad
+             hover:text-black
+             ' >Get Started</Link>
+
+          </div>
+          <br />
+          <Slide />
         </div>
       </main>
     </>

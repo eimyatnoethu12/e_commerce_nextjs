@@ -8,6 +8,8 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         <div className='max[h-screen]'>
             <Navbar />
             {children}
+            <br />
+            <br />
             <Footer />
         </div>
     )
